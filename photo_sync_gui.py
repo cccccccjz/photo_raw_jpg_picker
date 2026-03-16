@@ -117,7 +117,7 @@ class PhotoSyncApp:
         root = self._get_root_path()
         if not root:
             return
-        self._run_background(lambda: self.sync_cr3(root))
+        self._run_background(lambda: self.sync_raw(root))
 
     def split_files(self, root: Path):
         jpg_dir = root / JPG_DIR_NAME
